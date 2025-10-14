@@ -260,17 +260,12 @@ int main(int argc, char *argv[], char *envp[]) {
 		printf("******************************************************\n");
 		printf("Enter device name: ");
 		scanf("%s", deviceDisk);
-		printf("Are you sure? This action CANNOT be undone! Enter 4277009103 to delete %s device\n", device);
-		scanf("%i", &AREYOUSURE);
-		// if (AREYOUSURE != 4277009103) {
-		// 	printf("NOT going to delete device\n");
-		// } else {
+		printf("Are you sure? This action CANNOT be undone! Enter 4277009103 to delete %s device\n", deviceDisk);
+		// scanf("%i", &AREYOUSURE);
 		debug("Going to delete device %s\n", deviceDisk);
 		debug("Calling _APFSVolumeDelete\n");
 		int ret = _APFSVolumeDelete(deviceDisk);
 		printf("Deleted device: %s ret: %i\n", deviceDisk, ret);
-		// }
-
 	} else if (userchoice == 3) {
 		// Get the name of specified device (enter device in format disk0s1s1 - without /dev prefix)
 		printf("Enter device: ");

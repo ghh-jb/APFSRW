@@ -8,7 +8,7 @@ This is currently in beta. There may be issues that I've never experienced. But 
 
 # Tested partitions and iOS Versions
 - iPhone 11: iOS 16.3.1
-- iPhone SE 2016: iOS 15.8.4
+- iPhone SE 2016: iOS 15.8.4 (/Library, /Applications, /usr, /sbin, /bin, /etc)
 
 # Building
 You need to have theos installed.

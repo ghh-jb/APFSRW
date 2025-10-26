@@ -67,14 +67,13 @@ typedef struct apfs_mount_args apfs_mount_args_t;
 
 // Utility functions
 void debug(char *format, ...) {
-	va_list args;
-	va_start(args, format);
-	if (DEBUG_BUILD) {
-		printf("[DEBUG] ");
-		printf(format, args);
-	}
-	va_end(args);
-	return;
+    if (!DEBUG_BUILD) return;
+    va_list args;
+    va_start(args, format);
+    printf("[DEBUG] ");
+    vprintf(format, args);
+    va_end(args);
+    return;
 }
 
 char* jbrootpath() {
